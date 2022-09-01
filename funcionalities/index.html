@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://joaopmjm.github.io/joaopmjm.github.io/index.md/installation/">
+        <link rel="canonical" href="https://joaopmjm.github.io/joaopmjm.github.io/index.md/funcionalities/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Instalacao - Professional Project</title>
+        <title>Funcionalidades - Professional Project</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -36,8 +36,11 @@
                             <li class="navitem">
                                 <a href=".." class="nav-link">Home</a>
                             </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Instalacao</a>
+                            </li>
                             <li class="navitem active">
-                                <a href="./" class="nav-link">Instalacao</a>
+                                <a href="./" class="nav-link">Funcionalidades</a>
                             </li>
                         </ul>
 
@@ -48,7 +51,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../installation/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -58,7 +61,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/joaopmjm/joaopmjm.github.io/edit/master/docs/installation.md" class="nav-link">Edit on Projeto Profissional</a>
+                                <a href="https://github.com/joaopmjm/joaopmjm.github.io/edit/master/docs/funcionalities.md" class="nav-link">Edit on Projeto Profissional</a>
                             </li>
                     </ul>
                 </div>
@@ -78,17 +81,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#dependencias" class="nav-link">Dependencias</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="2"><a href="#pre-run" class="nav-link">Pre-run</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="2"><a href="#run" class="nav-link">Run</a>
+            <li class="nav-item" data-level="1"><a href="#funcionalidades" class="nav-link">Funcionalidades</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -97,29 +90,25 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="dependencias">Dependencias</h2>
-<ul>
-<li>SQLite3, <em>$pip install sqlite3</em></li>
-<li>Flask, <em>$pip install Flask</em></li>
-<li>Flask http auth, <em>$pip install flask_httpauth</em></li>
-</ul>
-<h2 id="pre-run">Pre-run</h2>
-<ol>
-<li>Installar o SQliteBrowser, <em>$snap install sqlitebrowser</em>.</li>
-<li>Rodar o gerenciador de Banco de dados <em>$sqlitebrowser</em>.</li>
-<li>Criar um banco de dados zerado, <em>file-&gt; New Database</em></li>
-<li>Na aba <em>Execute SQL</em> copiar o codigo contido no arquivo <em>quiz.sql</em> e colar esse na aba e executar.</li>
-<li>Na aba <em>Database Structure</em> clicar na tabela USER e clicar em <em>Modify Table</em>, assim que abrir a aba de modificar, apenas clicar em <em>OK</em></li>
-<li>Criar um arquivo no root do projeto chamado <em>user.csv</em> e adicionar um usuario com a senha, exemplo "<em>joao,123</em>", sinceramente pouco importa o segundo valor.</li>
-<li>Rodar no root <em>$python adduser.py</em>, isso vai criar seu usuario</li>
-</ol>
-<h2 id="run">Run</h2>
-<ol>
-<li>Rodar no root <em>$python softdes.py</em></li>
-<li>Entrar no Link escrito no terminal em <em>Running on http://...</em></li>
-<li>Login e senha sao o primeiro valor do CSV criado anteriormente, entao no caso, login <em>joao</em> e senha <em>joao</em>.</li>
-</ol>
-<p>Pronto voce esta dentro.</p></div>
+<h1 id="funcionalidades">Funcionalidades</h1>
+<p>No site em si serve apenas para visualizacao dos quizes, e com algumas funcionalidades em relacao ao login, como <em>logout</em> ou trocar a senha.</p>
+<p>As funcionalidades em relacao aos quizes (add, update, remove) sao via requisicoes a uma API, pode-se fazer isso via software <strong>postman</strong>, a seguir sao as requisicoes possiveis e suas chamadas.</p>
+<table>
+<thead>
+<tr>
+<th>tipo</th>
+<th>caminho</th>
+<th>funcionalidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>{BaseAddress}/?ID={ID do challenge}</td>
+<td>Entrega do desafio, fazendo cheques de hora da entrega, se o desafio existe, e promove logica com os dados dentro do QUIZ (Diagnostico, Problema, Codigo, etc...).</td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 
