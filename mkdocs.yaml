@@ -1,0 +1,8 @@
+site_name: Professional Project
+repo_url: https://github.com/joaopmjm/joaopmjm.github.io/
+repo_name: Projeto Profissional
+site_url: https://joaopmjm.github.io/
+nav:
+    - 'Home': 'docs/index.md'
+    - 'Instalacao': 'docs/installation.md'
+  
