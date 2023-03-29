@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://joaopmjm.github.io/joaopmjm.github.io/installation/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Installation - Professional Project</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Capstone Project - João's portfolio</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">Professional Project</a>
+                <a class="navbar-brand" href="../..">João's portfolio</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,10 +34,23 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../docs/index.md" class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">João Pedro's portfolio</a>
                             </li>
                             <li class="navitem">
-                                <a href="../docs/installation.md" class="nav-link">Instalacao</a>
+                                <a href="../../about/" class="nav-link">About João Pedro</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Capstone Project</a>
+</li>
+                                    
+<li>
+    <a href="../automated-school-call/" class="dropdown-item">Automated School Call</a>
+</li>
+                                </ul>
                             </li>
                         </ul>
 
@@ -48,7 +61,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/joaopmjm/joaopmjm.github.io/edit/master/docs/installation.md" class="nav-link">Edit on Projeto Profissional</a>
+                                <a rel="prev" href="../../about/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../automated-school-call/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/joaopmjm/joaopmjm.github.io/edit/master/docs/projects/capstone-project.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -68,18 +91,20 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#dependencias" class="nav-link">Dependencias</a>
+            <li class="nav-item" data-level="1"><a href="#capstone-project" class="nav-link">Capstone Project</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#summary" class="nav-link">Summary</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-level="2"><a href="#pre-run" class="nav-link">Pre-run</a>
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-level="2"><a href="#run" class="nav-link">Run</a>
+            <li class="nav-item" data-level="2"><a href="#development" class="nav-link">Development</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -87,29 +112,14 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="dependencias">Dependencias</h2>
-<ul>
-<li>SQLite3, <em>$pip install sqlite3</em></li>
-<li>Flask, <em>$pip install Flask</em></li>
-<li>Flask http auth, <em>$pip install flask_httpauth</em></li>
-</ul>
-<h2 id="pre-run">Pre-run</h2>
-<ol>
-<li>Installar o SQliteBrowser, <em>$snap install sqlitebrowser</em>.</li>
-<li>Rodar o gerenciador de Banco de dados <em>$sqlitebrowser</em>.</li>
-<li>Criar um banco de dados zerado, <em>file-&gt; New Database</em></li>
-<li>Na aba <em>Execute SQL</em> copiar o codigo contido no arquivo <em>quiz.sql</em> e colar esse na aba e executar.</li>
-<li>Na aba <em>Database Structure</em> clicar na tabela USER e clicar em <em>Modify Table</em>, assim que abrir a aba de modificar, apenas clicar em <em>OK</em></li>
-<li>Criar um arquivo no root do projeto chamado <em>user.csv</em> e adicionar um usuario com a senha, exemplo "<em>joao,123</em>", sinceramente pouco importa o segundo valor.</li>
-<li>Rodar no root <em>$python adduser.py</em>, isso vai criar seu usuario</li>
-</ol>
-<h2 id="run">Run</h2>
-<ol>
-<li>Rodar no root <em>$python softdes.py</em></li>
-<li>Entrar no Link escrito no terminal em <em>Running on http://...</em></li>
-<li>Login e senha sao o primeiro valor do CSV criado anteriormente, entao no caso, login <em>joao</em> e senha <em>joao</em>.</li>
-</ol>
-<p>Pronto voce esta dentro.</p></div>
+<h1 id="capstone-project">Capstone Project</h1>
+<h2 id="summary">Summary</h2>
+<p>The project was to develop a software capable of tracking artwork (usually a brand logo or art) through a video, idealy sports videos, so brands that bought space in fields or courts.
+We develop this with computer vision, and developed it to be able to became a service on the cloud as an API.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The project was developed in pair with Dell Technologies team, the idea came from inside their office, one of their clients had requested something of this kind. With their support on Project Management and Professional do aid us on technical doubts.</p>
+<h2 id="development">Development</h2>
+<p>We developed following the Agile methods, with weekly meetings to show updates, but without dailies.</p></div>
             </div>
         </div>
 
@@ -118,11 +128,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
