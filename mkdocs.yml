@@ -1,0 +1,18 @@
+
+site_name: João's portfolio
+repo_url: https://github.com/joaopmjm/joaopmjm.github.io
+authors:
+  - João Meirelles
+
+theme:
+  name: mkdocs
+  locale: en
+  include_sidebar: true
+  
+
+nav:
+  - 'index.md'
+  - 'about.md'
+  - 'Projects':
+    - 'Capstone Project': 'projects/capstone-project.md'
+    - 'Automated School Call': 'projects/automated-school-call.md'
